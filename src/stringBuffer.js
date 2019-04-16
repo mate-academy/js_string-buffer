@@ -25,6 +25,14 @@
  */
 function makeBuffer() {
   // write code here
+  let bufferArray = [];
+
+  return function(arg) {
+    if (arg !== undefined) {
+      bufferArray.push(arg);
+    }
+    return bufferArray.join('');
+  };
 }
 
 module.exports = makeBuffer;
