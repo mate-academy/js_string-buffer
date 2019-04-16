@@ -26,7 +26,7 @@
 function makeBuffer() {
   let values = '';
   return function(string) {
-    if (string === undefined) { // вызов без аргументов
+    if (string === undefined) {
       return values;
     }
     values += string;
