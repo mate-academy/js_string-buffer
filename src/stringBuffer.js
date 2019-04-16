@@ -25,6 +25,14 @@
  */
 function makeBuffer() {
   // write code here
+  let bufferedStr = '';
+  return function buffer(str) {
+    if (!str && str !== 0) {
+      return bufferedStr;
+    }
+    bufferedStr += str;
+    return bufferedStr;
+  };
 }
 
 module.exports = makeBuffer;
