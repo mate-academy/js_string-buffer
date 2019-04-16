@@ -26,7 +26,8 @@
 function makeBuffer() {
   let str = '';
   return (value = '') => {
-    return (str += value);
+    str += value;
+    return str;
   };
 }
 
