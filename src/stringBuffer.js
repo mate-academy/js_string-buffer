@@ -24,7 +24,7 @@
  * @return {function}
  */
 function makeBuffer() {
-  var stringBuffer = '';
+  let stringBuffer = '';
 
   return function(stringAppend) {
     if (arguments.length === 0) {
