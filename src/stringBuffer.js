@@ -30,7 +30,7 @@ function makeBuffer() {
     if (i === undefined) {
       return string;
     } else {
-      let result = string += i;
+      const result = string += i;
       return result;
     }
   };
