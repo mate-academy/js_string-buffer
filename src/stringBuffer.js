@@ -30,7 +30,6 @@ function makeBuffer() {
       return string;
     }
     string += value;
-    return string;
   };
 }
 
