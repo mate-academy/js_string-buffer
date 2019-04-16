@@ -24,7 +24,13 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let bufferArr = [];
+  return function(arg) {
+    if (arg !== undefined) {
+      bufferArr.push(arg);
+    }
+    return bufferArr.join('');
+  };
 }
 
 module.exports = makeBuffer;
