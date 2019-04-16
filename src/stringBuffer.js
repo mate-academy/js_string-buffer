@@ -27,9 +27,9 @@ function makeBuffer() {
   // write code here
   let bufferArray = [];
 
-  return function(arg) {
-    if (arg !== undefined) {
-      bufferArray.push(arg);
+  return function(value) {
+    if (value !== undefined) {
+      bufferArray.push(value);
     }
     return bufferArray.join('');
   };
