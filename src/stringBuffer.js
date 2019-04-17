@@ -25,11 +25,11 @@
  */
 function makeBuffer() {
   let buffer = '';
-  return function(value) {
-    if (value !== undefined) {
-      buffer += value;
+  return function(bufferValue) {
+    if (arguments.length === 0) {
+      return buffer;
     }
-    return buffer;
+    buffer += bufferValue;
   };
 }
 module.exports = makeBuffer;
