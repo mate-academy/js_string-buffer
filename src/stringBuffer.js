@@ -24,12 +24,13 @@
  * @return {function}
  */
 function makeBuffer() {
-  let bufferArr = [];
+  let buffer = '';
   return function(arg) {
     if (arg !== undefined) {
-      bufferArr.push(arg);
+      buffer += arg;
+    } else {
+      return buffer;
     }
-    return bufferArr.join('');
   };
 }
 
