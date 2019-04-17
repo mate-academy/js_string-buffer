@@ -28,8 +28,7 @@ function makeBuffer() {
   return function(buffer) {
     if (buffer !== undefined) {
       result += buffer;
-    }
-    return result;
+    } else return result;
   };
 }
 
