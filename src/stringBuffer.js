@@ -26,10 +26,7 @@
 function makeBuffer() {
   // write code here
   let bufferedStr = '';
-  return function buffer(str) {
-    if (!str && str !== 0) {
-      return bufferedStr;
-    }
+  return function buffer(str = '') {
     bufferedStr += str;
     return bufferedStr;
   };
