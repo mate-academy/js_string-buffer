@@ -25,9 +25,12 @@
  */
 function makeBuffer() {
   let str = '';
-  return function buffer(arg = '') {
-    str += arg;
-    return str;
+  return function buffer(arg) {
+    if (arg === undefined) {
+      return str;
+    } else {
+      str += arg;
+    }
   };
 }
 
