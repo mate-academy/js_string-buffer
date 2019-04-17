@@ -24,17 +24,10 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
   let str = '';
-  return function buffer(arg) {
-    if (arg === 0) {
-      arg = '0';
-    }
-    if (!arg) {
-      return str;
-    } else {
-      str += arg;
-    }
+  return function buffer(arg = '') {
+    str += arg;
+    return str;
   };
 }
 
