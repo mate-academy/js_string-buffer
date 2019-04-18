@@ -28,8 +28,9 @@ function makeBuffer() {
   return function(value) {
     if (arguments.length !== 0) {
       content += value;
+    } else {
+      return content;
     }
-    return content;
   };
 }
 
