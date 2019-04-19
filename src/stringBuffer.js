@@ -27,13 +27,11 @@ function makeBuffer() {
   let bufferStr = '';
 
   return function(str) {
-    if (!str && str !== 0) {
+    if (str === undefined) {
       return bufferStr;
     }
 
     bufferStr += str;
-
-    return bufferStr;
   };
 }
 
