@@ -26,8 +26,10 @@
 function makeBuffer() {
   let cache = '';
   return function buffer(str = '') {
+    if (str === '') {
+      return cache;
+    }
     cache += str;
-    return cache;
   };
 }
 module.exports = makeBuffer;
