@@ -24,10 +24,10 @@
  * @return {function}
  */
 function makeBuffer() {
-  let cashe = '';
+  let cache = '';
   return function buffer(str = '') {
-    cashe += str;
-    return cashe;
+    cache += str;
+    return cache;
   };
 }
 module.exports = makeBuffer;
