@@ -24,9 +24,14 @@
  * @return {function}
  */
 function makeBuffer() {
-  let result = '';
+  let buffer = '';
   return function(value) {
-    return value !== undefined ? (result += value) : result;
+    if (value !== undefined) {
+      buffer += value;
+      return buffer;
+    } else {
+      return buffer;
+    }
   };
 }
 
