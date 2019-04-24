@@ -25,13 +25,13 @@
  */
 function makeBuffer() {
   // write code here
-  let bufferArray = [];
+  let buffer = '';
 
   return function(value) {
-    if (value !== undefined) {
-      bufferArray.push(value);
+    if (arguments.length === 0) {
+      return buffer;
     }
-    return bufferArray.join('');
+    buffer += value;
   };
 }
 
