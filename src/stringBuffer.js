@@ -25,6 +25,12 @@
  */
 function makeBuffer() {
   // write code here
+  let buffer = '';
+
+  return function(input) {
+    buffer = input === undefined ? buffer : buffer += input;
+    return buffer;
+  };
 }
 
 module.exports = makeBuffer;
