@@ -26,9 +26,11 @@
 
 const makeBuffer = () => {
   let string = '';
-  return value => {
-    if (value !== undefined) {
-      string += value;
+  return (...args) => {
+    if (args.length > 0) {
+      for (const element of args) {
+        string += element;
+      }
     }
     return string;
   };
