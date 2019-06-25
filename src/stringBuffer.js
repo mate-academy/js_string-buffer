@@ -31,7 +31,6 @@ function makeBuffer() {
     if (incomeData === undefined) {
       return storage;
     }
-
     storage += incomeData;
 
     return storage;
