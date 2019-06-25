@@ -25,6 +25,19 @@
  */
 function makeBuffer() {
   // write code here
+  let memory = '';
+
+  function buffer(params) {
+    if (arguments.length > 0) {
+      const result = params;
+      memory += result;
+      return memory;
+    } else {
+      return memory;
+    }
+  }
+
+  return buffer;
 }
 
 module.exports = makeBuffer;
