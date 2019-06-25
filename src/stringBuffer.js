@@ -25,6 +25,15 @@
  */
 function makeBuffer() {
   // write code here
+  let phrase = '';
+
+  return (text) => {
+    if (text !== undefined) {
+      phrase += text.toString();
+    }
+
+    return phrase;
+  };
 }
 
 module.exports = makeBuffer;
