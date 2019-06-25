@@ -24,7 +24,15 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let previousValue = '';
+
+  return currentValue => {
+    if (currentValue || currentValue === 0 || currentValue === '') {
+      previousValue += currentValue;
+    }
+
+    return previousValue;
+  };
 }
 
 module.exports = makeBuffer;
