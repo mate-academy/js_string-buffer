@@ -25,6 +25,15 @@
  */
 function makeBuffer() {
   // write code here
+  let someText = '';
+
+  return function(chunck) {
+    if (arguments.length > 0) {
+      someText += chunck;
+    } else {
+      return someText;
+    }
+  };
 }
 
 module.exports = makeBuffer;
