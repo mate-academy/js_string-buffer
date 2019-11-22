@@ -29,7 +29,7 @@ function makeBuffer() {
     if (arguments.length === 0) {
       return buffer;
     }
-    buffer += value;
+    buffer += value.toString();
     return buffer;
   };
 }
