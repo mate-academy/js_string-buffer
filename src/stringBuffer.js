@@ -23,8 +23,13 @@
  *
  * @return {function}
  */
-function makeBuffer() {
-  // write code here
+function makeBuffer(value) {
+  let result = '';
+  return (str) => {
+    if (str === undefined) {
+      return result;
+    }
+    return result += str; // eslint-disable-line
+  };
 }
-
 module.exports = makeBuffer;
