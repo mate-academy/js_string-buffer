@@ -24,7 +24,13 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  const buffer = [];
+  return function func(addToBuffer) {
+    if (typeof addToBuffer === 'number' || typeof addToBuffer === 'string') {
+      buffer.push(addToBuffer);
+    }
+    return buffer.join('');
+  };
 }
 
 module.exports = makeBuffer;
