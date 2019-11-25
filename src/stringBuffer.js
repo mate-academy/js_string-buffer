@@ -23,10 +23,11 @@
  *
  * @return {function}
  */
-function makeBuffer(buffer = '') {
+function makeBuffer() {
+  let buffer = '';
   return function(str = '') {
-    // eslint-disable-next-line no-return-assign,no-param-reassign
-    return buffer += str;
+    buffer += str;
+    return buffer;
   };
 }
 
