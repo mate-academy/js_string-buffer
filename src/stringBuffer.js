@@ -24,12 +24,12 @@
  * @return {function}
  */
 function makeBuffer() {
-  const buffer = [];
+  let buffer = '';
   return function func(addToBuffer) {
     if (typeof addToBuffer === 'number' || typeof addToBuffer === 'string') {
-      buffer.push(addToBuffer);
+      buffer += addToBuffer;
     }
-    return buffer.join('');
+    return buffer;
   };
 }
 
