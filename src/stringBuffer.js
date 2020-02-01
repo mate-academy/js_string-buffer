@@ -25,18 +25,14 @@
 */
 
 function makeBuffer() {
-  window.buffer = '';
+  let prev = '';
 
   return function(a) {
     if (a !== undefined) {
-      window.buffer ? window.buffer += a : window.buffer = a;
-
-      return;
+      prev += a;
     }
 
-    const result = window.buffer;
-
-    return result;
+    return prev;
   };
 }
 
