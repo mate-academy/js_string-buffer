@@ -22,9 +22,22 @@
  * buffer() === 'The breakfast at 10AM'
  *
  * @return {function}
- */
+*/
+
 function makeBuffer() {
-  // write code here
+  window.buffer = '';
+
+  return function(a) {
+    if (a !== undefined) {
+      window.buffer ? window.buffer += a : window.buffer = a;
+
+      return;
+    }
+
+    const result = window.buffer;
+
+    return result;
+  };
 }
 
 module.exports = makeBuffer;
