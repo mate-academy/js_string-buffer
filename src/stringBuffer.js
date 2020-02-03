@@ -27,7 +27,11 @@ function makeBuffer() {
   let result = '';
 
   return function(value = '') {
-    return (result += String(value));
+    if (arguments.length > 0) {
+      result += value;
+    }
+
+    return result;
   };
 }
 
