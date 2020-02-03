@@ -26,7 +26,7 @@
 function makeBuffer() {
   let cache = '';
 
-  return function buffer(str = '') {
+  return function(str = '') {
     cache += str;
 
     return cache;
