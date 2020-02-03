@@ -26,11 +26,10 @@
 function makeBuffer() {
   let bufferText = '';
 
-  return function buffer(data) {
-    if (!arguments.length) {
-      return bufferText;
-    }
+  return function buffer(data = '') {
     bufferText += data;
+
+    return bufferText;
   };
 }
 
