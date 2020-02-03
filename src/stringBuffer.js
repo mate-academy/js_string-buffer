@@ -26,7 +26,7 @@
 const makeBuffer = () => {
   let buffer = '';
 
-  return (str = '') => (buffer += str);
+  return (str) => (str === undefined) ? buffer : (buffer += str);
 };
 
 module.exports = makeBuffer;
