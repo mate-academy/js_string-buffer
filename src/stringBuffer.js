@@ -27,10 +27,8 @@
 function makeBuffer() {
   let cachedString = '';
 
-  return function(a = undefined) {
-    if (a !== undefined) {
-      cachedString += a;
-    }
+  return function(a = '') {
+    cachedString += a;
 
     return cachedString;
   };
