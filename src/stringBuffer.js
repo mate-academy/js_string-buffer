@@ -24,12 +24,12 @@
  * @return {function}
  */
 function makeBuffer() {
-  let result = '';
+  let cachedString = '';
 
   const buffer = (str = '') => {
-    result += str;
+    cachedString += str;
 
-    return result;
+    return cachedString;
   };
 
   return buffer;
