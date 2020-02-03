@@ -24,14 +24,12 @@
  * @return {function}
  */
 function makeBuffer() {
-  let str = '';
+  let buffer = '';
 
-  return function(...arg) {
-    if (arg.length) {
-      str += arg[0];
-    } else {
-      return str;
-    }
+  return function(str = '') {
+    buffer += str;
+
+    return buffer;
   };
 }
 
