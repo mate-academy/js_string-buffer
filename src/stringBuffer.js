@@ -24,7 +24,10 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  // eslint-disable-next-line no-unused-vars
+  let startStr = '';
+
+  return (str = '') => (startStr += str);
 }
 
 module.exports = makeBuffer;
