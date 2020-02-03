@@ -32,8 +32,6 @@ function makeBuffer() {
     } else {
       return bufferResult;
     }
-
-    return func;
   };
 }
 
