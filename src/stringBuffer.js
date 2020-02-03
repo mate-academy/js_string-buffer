@@ -26,8 +26,10 @@
 function makeBuffer() {
   let holder = '';
 
-  return (str = '') => {
-    holder += str;
+  return function buffer(str) {
+    if (arguments.length > 0) {
+      holder += str;
+    }
 
     return holder;
   };
