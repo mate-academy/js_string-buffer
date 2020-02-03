@@ -25,14 +25,14 @@
 */
 
 function makeBuffer() {
-  let prev = '';
+  let cachedString = '';
 
-  return function(a) {
+  return function(a = undefined) {
     if (a !== undefined) {
-      prev += a;
+      cachedString += a;
     }
 
-    return prev;
+    return cachedString;
   };
 }
 
