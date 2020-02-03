@@ -26,9 +26,9 @@
 function makeBuffer() {
   let str = '';
 
-  return function() {
-    if (arguments.length) {
-      str += arguments[0];
+  return function(...arg) {
+    if (arg.length) {
+      str += arg[0];
     } else {
       return str;
     }
