@@ -24,14 +24,14 @@
  * @return {function}
  */
 function makeBuffer() {
-  let accamul = '';
+  let accumulator = '';
 
   return function buffer(info) {
     if (arguments.length === 0) {
-      return accamul;
+      return accumulator;
     }
 
-    accamul += info;
+    accumulator += info;
   };
 }
 
