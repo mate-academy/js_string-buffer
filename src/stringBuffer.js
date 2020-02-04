@@ -24,7 +24,15 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let accamul = '';
+
+  return function buffer(info) {
+    if (arguments.length === 0) {
+      return accamul;
+    }
+
+    accamul += info;
+  };
 }
 
 module.exports = makeBuffer;
