@@ -26,13 +26,7 @@
 function makeBuffer() {
   let cache = '';
 
-  return (str = '') => {
-    if (arguments.length) {
-      return (cache += str);
-    }
-
-    return str;
-  };
+  return (str = '') => (cache += str);
 }
 
 module.exports = makeBuffer;
