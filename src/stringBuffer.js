@@ -28,11 +28,10 @@ function makeBuffer() {
 
   return (str = '') => {
     if (arguments.length) {
-      return str;
+      return (cache += str);
     }
-    cache += str;
 
-    return cache;
+    return str;
   };
 }
 
