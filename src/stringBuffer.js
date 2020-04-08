@@ -24,7 +24,15 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let str = '';
+
+  return function(sub) {
+    if ([...arguments].length > 0) {
+      str += sub;
+    }
+
+    return str;
+  };
 }
 
 module.exports = makeBuffer;
