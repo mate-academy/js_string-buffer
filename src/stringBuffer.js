@@ -25,6 +25,16 @@
  */
 function makeBuffer() {
   // write code here
+  let cash = '';
+
+  return function buffer(str) {
+    if (arguments.length > 0) {
+
+      return cash += str;
+    }
+    
+    return cash;
+  }
 }
 
 module.exports = makeBuffer;
