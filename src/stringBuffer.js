@@ -26,7 +26,13 @@
 function makeBuffer() {
   let result = '';
   return function (value) {
-    return value === undefined ? result : result += value;
+    if (value === undefined) {
+      return result;
+    }
+
+    result += value;
+
+    return result;
   }
 }
 
