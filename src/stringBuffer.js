@@ -24,7 +24,15 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let currBuffer = '';
+
+  return str => {
+    if (str !== undefined) {
+      currBuffer += str;
+    } else {
+      return currBuffer;
+    }
+  };
 }
 
 module.exports = makeBuffer;
