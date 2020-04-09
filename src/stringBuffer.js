@@ -24,7 +24,17 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let currBuffer = '';
+
+  function buffer(str) {
+    if (str !== undefined) {
+      currBuffer += str;
+    } else {
+      return currBuffer;
+    }
+  }
+
+  return buffer;
 }
 
 module.exports = makeBuffer;
