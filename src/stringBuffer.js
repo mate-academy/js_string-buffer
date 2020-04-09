@@ -26,15 +26,13 @@
 function makeBuffer() {
   let currBuffer = '';
 
-  function buffer(str) {
+  return str => {
     if (str !== undefined) {
       currBuffer += str;
     } else {
       return currBuffer;
     }
-  }
-
-  return buffer;
+  };
 }
 
 module.exports = makeBuffer;
