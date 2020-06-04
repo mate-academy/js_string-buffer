@@ -24,7 +24,15 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let result = [];
+
+  return (...srcTxt) => {
+    result = result.concat(srcTxt);
+
+    if (!srcTxt[0]) {
+      return result.join('');
+    }
+  };
 }
 
 module.exports = makeBuffer;
