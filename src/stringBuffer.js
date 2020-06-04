@@ -24,14 +24,14 @@
  * @return {function}
  */
 function makeBuffer() {
-  let result = [];
+  let result = '';
 
-  return (...srcTxt) => {
-    result = result.concat(srcTxt);
-
-    if (!srcTxt[0]) {
-      return result.join('');
+  return (text) => {
+    if (text !== undefined) {
+      result += text;
     }
+
+    return result;
   };
 }
 
