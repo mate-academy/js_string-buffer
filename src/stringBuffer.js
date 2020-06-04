@@ -24,7 +24,17 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let str = '';
+
+  const buffer = input => {
+    if (input || input === 0 || input === '') {
+      str += (input + '');
+    } else {
+      return str;
+    }
+  };
+
+  return buffer;
 }
 
 module.exports = makeBuffer;
