@@ -24,7 +24,15 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let sum = '';
+
+  return function(string) {
+    if (string !== undefined) {
+      sum += string;
+    }
+
+    return sum;
+  };
 }
 
 module.exports = makeBuffer;
