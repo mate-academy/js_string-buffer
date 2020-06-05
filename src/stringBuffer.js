@@ -23,7 +23,7 @@
  *
  * @return {function}
  */
-function makeBuffer(n) {
+function makeBuffer() {
   let buffer = '';
 
   return function buff(addBuffer = '') {
