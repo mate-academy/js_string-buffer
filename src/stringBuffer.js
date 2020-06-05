@@ -24,7 +24,15 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let phrase = '';
+
+  return function buffer(phrasePart) {
+    if (phrasePart !== undefined) {
+      phrase += phrasePart;
+    }
+
+    return phrase;
+  };
 }
 
 module.exports = makeBuffer;
