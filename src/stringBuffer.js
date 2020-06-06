@@ -33,10 +33,4 @@ function makeBuffer() {
   };
 }
 
-// const buffer = makeBuffer();
-// console.log(buffer('The breakfast at '));
-// console.log(buffer(10));
-// console.log(buffer(' AM'));
-// console.log(buffer());
-
 module.exports = makeBuffer;
