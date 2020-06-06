@@ -24,7 +24,21 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let buffer = '';
+
+  return function(a) {
+    if (!arguments.length) {
+      return buffer;
+    } else {
+      buffer += a;
+    }
+  };
 }
+
+// const buffer = makeBuffer();
+// console.log(buffer('The breakfast at '));
+// console.log(buffer(10));
+// console.log(buffer(' AM'));
+// console.log(buffer());
 
 module.exports = makeBuffer;
