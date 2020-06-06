@@ -26,12 +26,10 @@
 function makeBuffer() {
   let buffer = '';
 
-  return function(a) {
-    if (!arguments.length) {
-      return buffer;
-    } else {
-      buffer += a;
-    }
+  return function(a = '') {
+    buffer += a;
+
+    return buffer;
   };
 }
 
