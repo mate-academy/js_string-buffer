@@ -25,6 +25,17 @@
  */
 function makeBuffer() {
   // write code here
+  const buff = [];
+
+  return function(a) {
+    if (a === undefined) {
+      return buff.join('');
+    } else {
+      buff.push(a);
+
+      return a;
+    }
+  };
 }
 
 module.exports = makeBuffer;
