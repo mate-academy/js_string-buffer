@@ -24,7 +24,15 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let accumulator = '';
+
+  return function(value) {
+    if (value !== undefined) {
+      accumulator += value;
+    }
+
+    return accumulator;
+  };
 }
 
 module.exports = makeBuffer;
