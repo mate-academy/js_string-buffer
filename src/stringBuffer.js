@@ -23,8 +23,16 @@
  *
  * @return {function}
  */
-function makeBuffer() {
-  // write code here
-}
 
+function makeBuffer() {
+  let string = '';
+  return i => {
+    if (i === undefined) {
+      return string;
+    } else {
+      string += i;
+      return string;
+    }
+  };
+}
 module.exports = makeBuffer;
