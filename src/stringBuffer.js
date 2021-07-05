@@ -25,6 +25,22 @@
  */
 function makeBuffer() {
   // write code here
-}
+  let result = '';
+
+  return function(str) {
+    if (str === undefined) {
+     return result;
+    };
+    return result += str;
+  }
+};
+
+const buffer = makeBuffer();
+
+buffer('The breakfast at ');
+buffer(10);
+buffer(' AM');
+buffer();
+//console.log(buffer());
 
 module.exports = makeBuffer;
