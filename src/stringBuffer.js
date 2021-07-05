@@ -24,7 +24,15 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let cache = '';
+
+  function buffer(argument = '') {
+    cache += argument;
+
+    return cache;
+  }
+
+  return buffer;
 }
 
 module.exports = makeBuffer;
