@@ -24,7 +24,11 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let accumulator = '';
+  return function(input = '') {
+    accumulator += input;
+    return accumulator;
+  };
 }
 
 module.exports = makeBuffer;
