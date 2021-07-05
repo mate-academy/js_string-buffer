@@ -25,6 +25,22 @@
  */
 function makeBuffer() {
   // write code here
+  let storage = '';
+
+  function buffer(incomeData) {
+    if (incomeData === undefined) {
+      return storage;
+    }
+    storage += incomeData;
+
+    return storage;
+  }
+
+  buffer.clear = function() {
+    storage = '';
+  };
+
+  return buffer;
 }
 
 module.exports = makeBuffer;
