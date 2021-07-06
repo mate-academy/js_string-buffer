@@ -25,6 +25,11 @@
  */
 function makeBuffer() {
   // write code here
+  let str = '';
+  return function(words = '') {
+    str += words;
+    return str;
+  };
 }
 
 module.exports = makeBuffer;
