@@ -24,7 +24,15 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let string = '';
+
+  return str => {
+    if (str === undefined) {
+      return string;
+    }
+
+    string += str;
+  };
 }
 
 module.exports = makeBuffer;
