@@ -24,7 +24,10 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let string = '';
+  return function(word) {
+    return (arguments.length === 0) ? string : (string += word);
+  };
 }
 
 module.exports = makeBuffer;
