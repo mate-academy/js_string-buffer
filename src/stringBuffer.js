@@ -22,9 +22,16 @@
  * buffer() === 'The breakfast at 10AM'
  *
  * @return {function}
- */
+*/
+
 function makeBuffer() {
-  // write code here
+  let cachedString = '';
+
+  return function(a = '') {
+    cachedString += a;
+
+    return cachedString;
+  };
 }
 
 module.exports = makeBuffer;
