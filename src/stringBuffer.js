@@ -23,8 +23,10 @@
  *
  * @return {function}
  */
-function makeBuffer() {
-  // write code here
-}
+const makeBuffer = () => {
+  let buffer = '';
+
+  return (str) => (str === undefined) ? buffer : (buffer += str);
+};
 
 module.exports = makeBuffer;
