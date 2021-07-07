@@ -24,7 +24,16 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let res = '';
+  const buffer = (carrentValue) => {
+    if (carrentValue !== undefined) {
+      return (res += carrentValue);
+    }
+
+    return res;
+  };
+
+  return buffer;
 }
 
 module.exports = makeBuffer;
