@@ -24,7 +24,13 @@
  * @return {function}
  */
 function makeBuffer() {
-  // write code here
+  let memory = '';
+
+  const result = function(input = '') {
+    memory += input;
+    return memory;
+  };
+  return result;
 }
 
 module.exports = makeBuffer;
