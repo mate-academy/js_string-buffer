@@ -25,6 +25,14 @@
  */
 function makeBuffer() {
   // write code here
-}
+  let result = '';
+  return (...args) => {
+    if (args.length) {
+      result += args[0];
+      return result;
+    }
+    return result;
+  };
+};
 
 module.exports = makeBuffer;
