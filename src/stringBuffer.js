@@ -23,8 +23,17 @@
  *
  * @return {function}
  */
-function makeBuffer() {
-  // write code here
-}
+
+const makeBuffer = () => {
+  let string = '';
+  return (...args) => {
+    if (args.length) {
+      for (const el of args) {
+        string += el;
+      }
+    }
+    return string;
+  };
+};
 
 module.exports = makeBuffer;
