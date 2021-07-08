@@ -23,8 +23,15 @@
  *
  * @return {function}
  */
+
 function makeBuffer() {
-  // write code here
-}
+  let bufferVal = '';
+
+  return (newValue = '') => {
+    bufferVal += newValue.toString();
+
+    return bufferVal;
+  };
+};
 
 module.exports = makeBuffer;
